@@ -1,0 +1,232 @@
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#111827;
+    color:white;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+#menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr;
+    padding:50px 20px;
+    align-items:center;
+    gap:30px;
+    background:white;
+}
+
+.hero-text h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.hero-text button{
+    padding:12px 25px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:16px;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* Features */
+
+.features{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:50px 20px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+/* About */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:50px 20px;
+    background:white;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:10px;
+}
+
+.about-text h2{
+    margin-bottom:20px;
+}
+
+/* Contact */
+
+.contact{
+    padding:50px 20px;
+}
+
+.contact h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+textarea{
+    height:120px;
+}
+
+form button{
+    padding:15px;
+    border:none;
+    background:#111827;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    border-radius:5px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    color:white;
+}
+
+/* Tablet */
+
+@media(min-width:768px){
+
+    .hero{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+/* Desktop */
+
+@media(min-width:1024px){
+
+    .features{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+
+/* Mobile Menu */
+
+@media(max-width:767px){
+
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#111827;
+        position:absolute;
+        top:80px;
+        right:0;
+        width:200px;
+        padding:20px;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    #menu-btn{
+        display:block;
+    }
+}
